@@ -1,0 +1,500 @@
+---
+# Mangan sass file
+---
+/*!
+ * Mangan v1.3.5
+ * Copyright 2015-2018 Diki Ananta
+ * Released under the MIT license
+ */
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans") screen;
+
+// Font family
+$lato:              Lato, sans-serif;
+$opensans:          "Open Sans", sans-serif;
+
+// Sizes
+$base-font-size:    16.5px;
+$small-font-size:   $base-font-size * 0.775;
+$base-line-height:  1.5;
+$spacing-unit:      30px;
+
+// Color
+$background-color:      #f9f9f9;
+$black:                 #000;
+$blockquote:            #6c6c6c;
+$blockquote-left:       #dedede;
+$code:                  #eaeaea;
+$dark-color:            #2d2d2d;
+$date-color:            #626262;
+$gray:                  #d9d9d9;
+$header-gradient-left:  #2093f0;
+$header-gradient-right: #19d274;
+$hr-color:              #b5b5b5;
+$link-color:            #128ab3;
+$link-home:             #3c4245;
+$link-hover-color:      #0697c7;
+$selection:             #56bdd4;
+$white:                 #fff;
+
+// Width of the content area
+$content-width:     800px;
+$on-palm:           600px;
+$on-laptop:         800px;
+
+// Media queries
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+/**
+ * Body styling
+ */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $lato;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $dark-color;
+  -webkit-text-size-adjust: 100%;
+  background-color: $background-color;
+}
+
+/**
+ * Navigation for web and mobile view
+ */
+nav {
+  line-height: 90px;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .icon-link {
+    line-height: $base-line-height;
+  }
+
+  @include media-query($on-palm) {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    margin-top: 29px;
+    margin-right: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 0 2px 7px rgba($black,.4);
+    }
+
+    .menu-icon {
+      display: block;
+      float: right;
+      padding: 10.5px 9px;
+      line-height: 0;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+    }
+
+    .nav-mobile {
+      display: none;
+      width: 80px;
+      margin-right: 10px;
+      margin-left: 10px;
+      clear: both;
+      line-height: 118px;
+    }
+
+    &:hover .nav-mobile {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .icon-link {
+      display: block;
+      padding: 5px 10px;
+      margin-right: 0;
+      margin-bottom: 15px;
+      margin-left: 0;
+    }
+  }
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, ul, ol,
+%vertical-rhythm {
+  padding: 0;
+  margin: 0 0 $spacing-unit / 2 0;
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/**
+ * Selection and block
+ */
+::-moz-selection {
+  color: $white;
+  background: $selection;
+}
+
+::selection {
+  color: $white;
+  background: $selection;
+}
+
+/**
+ * Images
+ * img.logo: Logo for header links
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+
+  &.logo {
+    width: $spacing-unit - 5;
+    height: $spacing-unit - 5;
+    margin: $spacing-unit + 10 auto;
+
+    &:hover {
+      background: url("/img/icon-hover.png");
+    }
+  }
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Links
+ */
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &.home {
+    color: $link-home;
+
+    &:visited {
+      color: $link-home;
+    }
+  }
+
+  &.gray-underline {
+    border-bottom: 1px solid $gray;
+  }
+
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+/**
+ * Horizontal rule or line
+ */
+hr {
+  margin: 40px 65% 40px 0;
+  border: 0;
+  border-top: 1px solid $hr-color;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  padding: 10px 20px 10px 50px;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  color: $blockquote;
+  border-left: 4px double $blockquote-left;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre, code {
+  font-family: $opensans;
+  color: $dark-color;
+  background-color: $code;
+}
+
+code {
+  padding: 3px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: scroll;
+
+  > code {
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+  }
+}
+
+/**
+ * Footer
+ */
+footer {
+  padding: $spacing-unit $spacing-unit/2;
+  font-size: 14px;
+  color: #4b4b4b;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+/**
+ * Site header
+ */
+.site-header {
+  position: relative;
+  text-align: center;
+  background: -webkit-linear-gradient(right, rgba($header-gradient-left, 0.75) 0%, rgba($header-gradient-right, 0.75) 100%);
+  background: linear-gradient(to right, rgba($header-gradient-left, 0.75) 0%, rgba($header-gradient-right, 0.75) 100%);
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: calc(690px);
+  padding: $spacing-unit+20 0 0;
+  margin-right: auto;
+  margin-left: auto;
+  @extend %clearfix;
+
+  &.post {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  }
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit - 10;
+    padding-bottom: $spacing-unit;
+    padding-left: $spacing-unit - 10;
+
+    &.post {
+      padding-right: $spacing-unit / 2;
+      padding-left: $spacing-unit / 2;
+    }
+  }
+}
+
+/**
+ * Summary in homepage
+ */
+.summary {
+  margin-bottom: 3px;
+  font-size: 17px;
+  color: #505050;
+
+  p {
+    margin-bottom: unset;
+  }
+
+  h4 {
+    margin-top: 25px;
+    margin-bottom: unset;
+    font-weight: bold;
+  }
+
+  &:visited {
+    color: #505050;
+  }
+}
+
+/**
+ * Underline style for first word
+ */
+.short-underline {
+  font-size: 18px;
+  background: url("/img/line.png") 0 100% no-repeat;
+  background-size: 20px;
+}
+
+/**
+ * Gallery
+ */
+.photos, .caption {
+  &:before, &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.photos {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.photo {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  &.p0:hover ~ .c0,
+  &.p1:hover ~ .c1,
+  &.p2:hover ~ .c2,
+  &.p3:hover ~ .c3,
+  &.p4:hover ~ .c4 {
+    display: block;
+  }
+}
+
+.caption {
+  position: absolute;
+  top: 100%;
+  display: none;
+  font-size: 0.835em;
+  line-height: 1.1;
+}
+
+/**
+ * List of articles in homepage
+ */
+.post-list {
+  margin-bottom: $spacing-unit / 2;
+  margin-left: 0;
+  list-style: none;
+}
+
+.post-date {
+  font-size: $small-font-size;
+  color: $date-color;
+}
+
+.post-link {
+  font-size: 16px;
+}
+
+.title {
+  padding-top: $spacing-unit / 3.75;
+}
+
+.date {
+  width: 100px;
+  height: $spacing-unit + 3;
+  padding-top: $spacing-unit / 3.75;
+  border-bottom: 1px dashed #e1e2e3;
+}
+
+/**
+ * Article page
+ */
+.post-header {
+  margin-bottom: $spacing-unit + 10;
+}
+
+.post-title {
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.post-line {
+  width: 20px;
+  height: 5px;
+  margin: $spacing-unit + 10 auto 0;
+  background: url("/img/line.png") 0 100% no-repeat;
+  background-size: 20px;
+  content: "";
+}
+
+.post-detail {
+  margin-top: -10px;
+  font-family: $opensans;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.post-new {
+  float: left;
+  width: 50%;
+  margin: 1px 0;
+}
+
+.post-old {
+  float: right;
+  width: 50%;
+  margin: 1px 0;
+  text-align: right;
+}
+
+/**
+ * Comments
+ */
+.post-and-comment-separator {
+  margin: 100px auto 35px;
+}
+
+/**
+ * Mobile navigation
+ */
+.nav-mobile {
+  text-align: center;
+}
+
+/**
+ * Icons
+ */
+.icon {
+  > svg {
+    display: inline-block;
+    margin: 1.5px;
+    vertical-align: middle;
+  }
+}

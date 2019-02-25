@@ -1,0 +1,9 @@
+---
+layout: {{ layout }}
+title: "{{ title }}"
+date: {{ date }}
+author: dikiaap
+description: ""
+comments: true
+---
+<!--more-->

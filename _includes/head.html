@@ -1,0 +1,24 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>{% capture description %}{% if page.description %}{{ page.description }}{% elsif page.title %}{{ content | raw_content }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  <meta name="author" content="{{ site.name }}">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.social_username }}">
+  <meta name="twitter:creator" content="@{{ site.social_username }}">
+  <meta name="twitter:dnt" content="on">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  <meta property="og:image" content="{{ '/img/thumbnail.png' | absolute_url }}">
+  <meta name="theme-color" content="#55bfcf">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#55bfcf">
+  <link rel="stylesheet" href="{{ '/css/mangan.min.css' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/favicon.png' | relative_url }}">
+  <link rel="alternate" href="{{ '/feed.xml' | absolute_url }}" type="application/rss+xml" title="{{ site.title }}">
+</head>

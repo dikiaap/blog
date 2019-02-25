@@ -1,0 +1,35 @@
+---
+layout: default
+---
+  <div class="summary">
+    <p><b><span class="short-underline">Hi!</span></b> I am {{ site.name }} and I live in Indonesia.</p>
+    <p>Little more about me. I'm a author, web developer, huge nerd, and &lt;3 science.</p>
+    <h4><span class="short-underline">The pics ...</span></h4>
+    <div class="photos">
+      <a href="https://dikiaap.id" class="p0 photo" target="_blank" rel="noopener"><img src="{{ '/img/01.jpg' | relative_url }}" alt="My pict."></a>
+      <a href="https://dikiaap.id" class="p1 photo" target="_blank" rel="noopener"><img src="{{ '/img/02.jpg' | relative_url }}" alt="Lorem ipsum dolor sit amet."></a>
+      <a href="https://dikiaap.id" class="p2 photo" target="_blank" rel="noopener"><img src="{{ '/img/03.jpg' | relative_url }}" alt="Lorem ipsum dolor sit amet."></a>
+      <a href="https://dikiaap.id" class="p3 photo" target="_blank" rel="noopener"><img src="{{ '/img/04.jpg' | relative_url }}" alt="Lorem ipsum dolor sit amet."></a>
+      <a href="https://dikiaap.id" class="p4 photo" target="_blank" rel="noopener"><img src="{{ '/img/05.jpg' | relative_url }}" alt="Lorem ipsum dolor sit amet."></a>
+      <div class="caption c0">My pict.</div>
+      <div class="caption c1">Lorem ipsum dolor sit amet.</div>
+      <div class="caption c2">Lorem ipsum dolor sit amet.</div>
+      <div class="caption c3">Lorem ipsum dolor sit amet.</div>
+      <div class="caption c4">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <h4><span class="short-underline">Writings.</span></h4>
+  </div>
+  <ul class="post-list">{% for post in paginator.posts %}
+    <li class="title"><a href="{{ post.url | relative_url }}" class="post-link home">{{ post.title }}</a></li>
+    <li class="date"><span class="post-date">{{ post.date | date_to_string }}</span></li>{% endfor %}
+  </ul>
+  <div class="post-new">{% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="home gray-underline">
+      <b>Previous page</b>
+    </a>{% else %}{% endif %}
+  </div>
+  <div class="post-old">{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="home gray-underline">
+      <b>Next page</b>
+    </a>{% else %}{% endif %}
+  </div>

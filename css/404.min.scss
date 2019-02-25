@@ -1,0 +1,52 @@
+---
+# 404 sass file
+---
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+
+// Color variables
+$selection:   #252525;
+$text-color:  #202020;
+$white:       #fff;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: table;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  color: $text-color;
+}
+
+img {
+  width: 185px;
+  height: 278px;
+}
+
+::-moz-selection {
+  color: $white;
+  background: rgba($selection, 0.45);
+}
+
+::selection {
+  color: $white;
+  background: rgba($selection, 0.45);
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.content {
+  display: inline-block;
+}
+
+.title {
+  font-size: 2em;
+}
