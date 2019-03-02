@@ -7,7 +7,26 @@
  * Released under the MIT license
  */
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans") screen;
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"),
+       url("../fonts/lato-v14-latin-regular.woff2") format("woff2"),
+       url("../fonts/lato-v14-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+       url("../fonts/open-sans-v15-latin-regular.woff2") format("woff2"),
+       url("../fonts/open-sans-v15-latin-regular.woff") format("woff");
+}
 
 // Font family
 $lato:              Lato, sans-serif;

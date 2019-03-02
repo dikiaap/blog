@@ -2,7 +2,16 @@
 # 404 sass file
 ---
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200;
+  src: local("Source Sans Pro ExtraLight"), local("SourceSansPro-ExtraLight"),
+       url("../fonts/source-sans-pro-v11-latin-200.woff2") format("woff2"),
+       url("../fonts/source-sans-pro-v11-latin-200.woff") format("woff");
+}
 
 // Color variables
 $selection:   #252525;
