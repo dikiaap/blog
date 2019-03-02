@@ -82,7 +82,7 @@ A cross-platform, GPU-accelerated terminal emulator.
 
 [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome)
 
-The iconic font that I use in my bar, editor, and around the web that have emojis. :smile:
+The iconic font that I use in my bar, editor, and around the web that have emojis. 😄
 
 **[Zsh](https://www.zsh.org/) and [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)**
 

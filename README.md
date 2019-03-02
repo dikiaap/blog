@@ -10,7 +10,7 @@
 ## Build
 
 ```shell
-gem install jekyll jekyll-paginate jekyll-sitemap jemoji
+gem install jekyll jekyll-paginate jekyll-sitemap
 jekyll build
 jekyll serve
 ```
