@@ -78,7 +78,6 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $dark-color;
-  -webkit-text-size-adjust: 100%;
   background-color: $background-color;
 }
 
@@ -162,11 +161,6 @@ h1, h2, h3, h4, h5, h6 {
 /**
  * Selection and block
  */
-::-moz-selection {
-  color: $white;
-  background: $selection;
-}
-
 ::selection {
   color: $white;
   background: $selection;
@@ -310,7 +304,6 @@ footer {
 .site-header {
   position: relative;
   text-align: center;
-  background: -webkit-linear-gradient(right, rgba($header-gradient-left, 0.75) 0%, rgba($header-gradient-right, 0.75) 100%);
   background: linear-gradient(to right, rgba($header-gradient-left, 0.75) 0%, rgba($header-gradient-right, 0.75) 100%);
 }
 
@@ -325,13 +318,11 @@ footer {
   @extend %clearfix;
 
   &.post {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   }
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit - 10;
     padding-bottom: $spacing-unit;
     padding-left: $spacing-unit - 10;
