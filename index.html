@@ -21,7 +21,7 @@ layout: default
   </div>
   <ul class="post-list">{% for post in paginator.posts %}
     <li class="title"><a href="{{ post.url | relative_url }}" class="post-link home">{{ post.title }}</a></li>
-    <li class="date"><span class="post-date">{{ post.date | date_to_string }}</span></li>{% endfor %}
+    <li class="date"><span class="post-date"><time datetime="{{ post.date | date_to_xmlschema }}" title="{{ post.date | date_to_rfc822 }}">{{ post.date | date_to_string }}</time></span></li>{% endfor %}
   </ul>
   <div class="post-new">{% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="home gray-underline">
