@@ -1,20 +1,16 @@
 name: build
 
-on:
-  schedule:
-    - cron: 0 0 1 * *
+on: [push, pull_request]
 
 jobs:
   build:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest]
-        ruby: 2.6
+        ruby: [2.6]
     runs-on: ${{ matrix.platform }}
     steps:
-      - name: Checkout
-      - uses: actions/checkout@v1
-      - name: Set up Ruby ${{ matrix.ruby }}
+      - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
