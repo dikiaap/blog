@@ -1,24 +1,26 @@
-name: Build blog.dikiaap.id
+name: build
 
-on: [push, pull_request]
+on:
+  schedule:
+    - cron: 0 0 1 * *
 
 jobs:
   build:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest]
+        ruby: 2.6
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby ${{ matrix.ruby }}
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.6.x
+          ruby-version: ${{ matrix.ruby }}
       - name: Install packages
         run: |
           gem update --system
           gem install jekyll jekyll-paginate jekyll-sitemap
-      - name: Build
+      - name: Build blog.dikiaap.id
         run: |
           jekyll clean
           jekyll build

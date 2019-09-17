@@ -1,6 +1,6 @@
 # Diki Ananta's blog site
 
-[![Status Build](https://api.travis-ci.com/dikiaap/blog.dikiaap.id.svg?branch=gh-pages)](https://travis-ci.com/dikiaap/blog.dikiaap.id)
+[![Status Build](https://github.com/dikiaap/blog.dikiaap.id/workflows/build/badge.svg)](#)
 
 ## Requirements
 
