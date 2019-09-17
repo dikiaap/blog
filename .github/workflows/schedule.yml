@@ -1,6 +1,9 @@
-name: build
+name: schedule
 
-on: [push, pull_request]
+on:
+  schedule:
+    # Monthly
+    - cron: '0 0 1 * *'
 
 jobs:
   build:
