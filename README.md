@@ -1,6 +1,6 @@
 # Diki Ananta's blog site
 
-[![Status Build](https://github.com/dikiaap/blog.dikiaap.id/workflows/build/badge.svg)](#)
+[![Build Status](https://github.com/dikiaap/blog.dikiaap.id/workflows/build/badge.svg)](#)
 
 ## Requirements
 
