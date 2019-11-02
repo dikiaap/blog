@@ -50,17 +50,17 @@ To get a better user experience I have to install some apps like:
 
 [**i3blocks**](https://github.com/vivien/i3blocks)
 
-A flexible scheduler for your i3bar blocks.
+A feed generator for text based status bars.
 
-![Oxide i3blocks](/img/post/i3blocks.png)
+![Oxide i3blocks](https://files.dikiaap.id/img/dotfiles/i3blocks.png)
 
 [**i3lock-fancy**](https://github.com/meskarune/i3lock-fancy)
 
 A neat screen locker for i3.
 
-![i3lock-fancy](/img/post/i3lock-fancy.png)
+![Oxide i3lock-fancy](https://files.dikiaap.id/img/dotfiles/i3lock-fancy.png)
 
-[**Rofi**](https://github.com/DaveDavenport/rofi)
+[**Rofi**](https://github.com/davatorium/rofi)
 
 An application launcher and dmenu replacement.
 
@@ -72,7 +72,7 @@ A highly configurable and lightweight notification daemon.
 
 ![Oxide Dunst](https://files.dikiaap.id/img/dotfiles/dunst.png)
 
-[**Compton**](https://github.com/yshui/compton)
+[**picom**](https://github.com/yshui/picom)
 
 To give a shadow effect and smooth appearance.
 
