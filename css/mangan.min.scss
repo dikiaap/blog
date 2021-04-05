@@ -229,6 +229,28 @@ a {
 }
 
 /**
+ * Buttons
+ */
+button {
+  padding: 0.375em 0.75em;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #505050;
+  cursor: pointer;
+  background-color: $background-color;
+  border: #bbb 1px solid;
+  border-radius: 0.25em;
+
+  &:hover {
+    border: #5e5e5e 1px solid;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/**
  * Horizontal rule or line
  */
 hr {
@@ -507,4 +529,11 @@ footer {
     margin: 1.5px;
     vertical-align: middle;
   }
+}
+
+/**
+ * Text center
+ */
+.text-center {
+  text-align: center;
 }

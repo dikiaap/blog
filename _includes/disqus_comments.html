@@ -1,13 +1,16 @@
 {% if page.comments %}
   <div class="post-line post-and-comment-separator"></div>
-  <div id="disqus_thread"></div>
+  <div class="text-center" id="disqus_thread">
+    <button id="loadComments">Load comments</button>
+  </div>
   <script>
-    (function() {
+    document.getElementById('loadComments').addEventListener('click', function() {
+      this.style.display = 'none';
       var d = document, s = d.createElement('script');
       s.src = 'https://dikiaapblog.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
-    })();
+    });
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/">comments powered by Disqus.</a></noscript>
 {% endif %}
