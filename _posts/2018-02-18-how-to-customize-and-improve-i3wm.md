@@ -76,7 +76,7 @@ A highly configurable and lightweight notification daemon.
 
 To give a shadow effect and smooth appearance.
 
-[**Alacritty**](https://github.com/jwilm/alacritty)
+[**Alacritty**](https://github.com/alacritty/alacritty)
 
 A cross-platform, GPU-accelerated terminal emulator.
 
@@ -84,7 +84,7 @@ A cross-platform, GPU-accelerated terminal emulator.
 
 The iconic font that I use in my bar, editor, and around the web that have emojis. 😄
 
-**[Zsh](https://www.zsh.org/) and [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)**
+**[Zsh](https://www.zsh.org/) and [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)**
 
 A shell and community-driven framework that designed for interactive use and managing my Zsh configuration.
 
