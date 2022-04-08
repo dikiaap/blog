@@ -2,8 +2,8 @@
 # Mangan sass file
 ---
 /*!
- * Mangan v1.4
- * Copyright 2015-2019 Diki Ananta
+ * Mangan v1.4.1
+ * Copyright 2015-2022 Diki Ananta
  * Released under the MIT license
  */
 @charset "utf-8";
@@ -180,7 +180,8 @@ img {
     margin: $spacing-unit + 10 auto;
 
     &:hover {
-      background: url("/img/icon-hover.png");
+      background: url("/img/icon-hover.svg");
+      background-size: $spacing-unit - 5;
     }
   }
 }
