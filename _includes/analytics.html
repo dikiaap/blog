@@ -1,6 +1,13 @@
 <script>
-window.goatcounter = {
-  no_onload: ('doNotTrack' in navigator && navigator.doNotTrack === '1'),
-};
+  if (navigator.doNotTrack !== '1') {
+    (function () {
+      window.goatcounter = { endpoint: 'https://dikiaapblog.goatcounter.com/count' }
+      var gc = document.createElement('script');
+      gc.type = 'text/javascript';
+      gc.async = true;
+      gc.src = 'https://gc.zgo.at/count.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gc, s);
+    })();
+  }
 </script>
-<script data-goatcounter="https://dikiaapblog.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
